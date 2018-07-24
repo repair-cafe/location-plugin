@@ -1,5 +1,6 @@
 <?php namespace RainLab\Location\FormWidgets;
 
+use Backend\Classes\FormField;
 use Html;
 use Backend\Classes\FormWidgetBase;
 use RainLab\Location\Models\Setting;
@@ -92,5 +93,13 @@ class AddressFinder extends FormWidgetBase
         $apiKey = Setting::get('google_maps_key');
         $this->addJs('//maps.googleapis.com/maps/api/js?libraries=places&key='.$apiKey);
         $this->addJs('js/location-autocomplete.js', 'core');
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getSaveValue($value)
+    {
+        return FormField::NO_SAVE_DATA;
     }
 }

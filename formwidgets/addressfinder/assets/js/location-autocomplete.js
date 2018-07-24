@@ -96,7 +96,7 @@
                 inputLongitude: 'lng'
             },
             'short': {
-                inputStreet: ['street_number', 'route'],
+                inputStreet: ['route', 'street_number'],
                 inputCity: 'locality',
                 inputZip: 'postal_code',
                 inputState: 'administrative_area_level_1',
